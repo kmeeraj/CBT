@@ -48,6 +48,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import {RouterModule, Routes} from '@angular/router';
 import { SideCardComponent } from './side-card/side-card.component';
+import { D3graphComponent } from './d3graph/d3graph.component';
+import {D3Service} from 'd3-ng2-service';
 
 const routes: Routes = [
   {
@@ -69,7 +71,8 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    SideCardComponent
+    SideCardComponent,
+    D3graphComponent
   ],
   imports: [
     BrowserModule,
@@ -116,7 +119,7 @@ const routes: Routes = [
     CovalentDataTableModule,
     CovalentMessageModule,
   ],
-  providers: [],
+  providers: [D3Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
